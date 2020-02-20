@@ -153,4 +153,38 @@ void f_display_town()
 }
 
 
+class Boma{
+public:
+	int town_id;
+	string town_name;
+
+
+	void f_display_town();
+};
+class Town: public Boma{
+int town_id;
+string town_name;
+
+	void f_display_town();
+};
+class Houses:public Town{
+public:
+	int town_id;
+	string town_name;
+
+	void f_display_town();
+};
+class payment:public Boma{
+	public:
+		string house_type;
+		int bank_account;
+		int m_pesa_till;
+		int owner_contacts;
+
+		void f_display_town();
+};
+class rental:public payment
+
+
+
 
