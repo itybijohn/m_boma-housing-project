@@ -126,7 +126,7 @@ void f_display_town()
     if (conn)
     {
        
-        string query = "SELECT * FROM town ";
+        string query = " SELECT monthly_rent FROM rental_cost WHERE town_id = 100 AND house_cartegory = 'Bungalow'";
         const char* q = query.c_str();
         qstate = mysql_query(conn, q);
         if (!qstate)
@@ -136,7 +136,8 @@ void f_display_town()
 
              while (row = mysql_fetch_row(res))
              {
-                 printf("%s   %s \n", row[0],row[1]);
+                 cout << row[0];
+                 // printf("%s    \n", row[0]);
             }
         }
         else
